@@ -1,6 +1,6 @@
 console.log('***** Music Collection *****')
 
-let collection = [];
+let collection = []; // initializes empty collection array
 
 function addToCollection(title, artist, yearPublished){
   let album = {  //initialize album object
@@ -26,3 +26,15 @@ addToCollection("She's My Witch", 'Kip Tyler', 1958);
 
 // further testing
 console.log(collection);
+
+
+function showCollection(array){
+  console.log(array.length);
+
+  for(album of array){
+    console.log(`${album.Title} by ${album.Artist} published in ${album.Release}`);
+  }
+}
+
+// testing function
+showCollection(collection);
