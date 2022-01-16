@@ -2,7 +2,7 @@ console.log('***** Music Collection *****')
 
 let collection = []; // initializes empty collection array
 
-function addToCollection(title, artist, yearPublished){
+function addToCollection( title, artist, yearPublished ){
   let album = {  //initialize new album object
     Title: title, // sets each input argument to the appropriate property
     Artist: artist,
@@ -28,7 +28,7 @@ addToCollection("She's My Witch", 'Kip Tyler', 1958);
 console.log(collection);
 
 
-function showCollection(array){
+function showCollection( array ){
   console.log(array.length); // logs number of albums in array
 
   for(album of array){ // loops through imput array
@@ -43,7 +43,7 @@ function showCollection(array){
 showCollection(collection);
 
 
-// Just did this to demonstrate the alternet means of notation and bring up the var question I had
+// Just did this to demonstrate an alternatw means of notation and bring up the var question I had
 // function showCollection_alt(array){
 //   console.log(array.length); // logs number of albums in array
 //
@@ -56,3 +56,28 @@ showCollection(collection);
 // }
 //
 // showCollection_alt(collection);
+
+
+function findByArtist(artist) {
+  let results = [] //initializes array to be returned
+
+  for (album of collection) {
+    if (album.Artist === artist) {
+      console.log('Result found! :D');
+      results.push(album);
+    }
+  }
+  if (results.length < 1) {
+    console.log('No results found :(');
+  }
+  return results;
+}
+
+//testing function
+console.log(findByArtist('Niel Young')); // should return array of 1
+console.log(findByArtist('Brenda Lee'));
+console.log(findByArtist('Ke$ha')); // should return empty array + no results message
+
+//testing function with multiple albums from one Artist
+addToCollection('Grandma, What Great Songs You Sang!', 'Brenda Lee', 1959);
+console.log(findByArtist('Brenda Lee')); // should return an array of 2
