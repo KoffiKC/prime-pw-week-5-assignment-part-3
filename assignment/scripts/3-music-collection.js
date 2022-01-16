@@ -61,13 +61,13 @@ showCollection(collection);
 function findByArtist(artist) {
   let results = [] //initializes array to be returned
 
-  for (album of collection) {
-    if (album.Artist === artist) {
+  for (album of collection) { // iterates through the collection array
+    if (album.Artist === artist) { // checks if artist property in collection against the input
       console.log('Result found! :D');
-      results.push(album);
+      results.push(album); // adds album to the results array
     }
   }
-  if (results.length < 1) {
+  if (results.length < 1) { // checks if results is empty
     console.log('No results found :(');
   }
   return results;
