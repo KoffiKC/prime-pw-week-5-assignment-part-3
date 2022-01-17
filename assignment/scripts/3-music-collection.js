@@ -13,16 +13,15 @@ function addToCollection( title, artist, yearPublished ){
 }
 
 // testing function
-console.log(collection);
-addToCollection('All Alone Am I', 'Brenda Lee', 1963);
-console.log(collection);
+console.log(collection); // shows thats its empty
+console.log(addToCollection('All Alone Am I', 'Brenda Lee', 1963));
+console.log(addToCollection('Psychedelic Pill', 'Niel Young', 2012));
+console.log(addToCollection('The Story', 'Brandi Carlile', 2007));
+console.log(addToCollection('Kidz bop 28', 'various', 2015));
+console.log(addToCollection('I Love Men', 'Eartha Kitt', 1984));
+console.log(addToCollection("Attack On Memory", 'Cloud Nothings', 2012));
+console.log(collection);// shows that its full!
 
-//adding more ablums
-addToCollection('Psychedelic Pill', 'Niel Young', 2012);
-addToCollection('The Story', 'Brandi Carlile', 2007);
-addToCollection('Kidz bop 28', 'various', 2015);
-addToCollection('I Love Men', 'Eartha Kitt', 1984);
-addToCollection("She's My Witch", 'Kip Tyler', 1958);
 
 // further testing
 console.log(collection);
